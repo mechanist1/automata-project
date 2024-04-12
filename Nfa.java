@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Afn {
+public class Nfa {
 
     public ArrayList<String> etats;
     public ArrayList<Character> alphabet;
@@ -10,7 +10,7 @@ public class Afn {
 
     Scanner sc = new Scanner(System.in);
 
-    public Afn() {
+    public Nfa() {
 
         alphabet = new ArrayList<Character>();
         etats = new ArrayList<String>();
@@ -65,25 +65,25 @@ public class Afn {
     }
 
     public void ajouterSymbole() {
-        char s; // le symbole entree par l'utilisateur
+        char symbole; // le symbole entree par l'utilisateur
         int i; //
         System.out.print("donner le symbole que vous voulez ajouter (char):   ");
-        s = sc.next().charAt(0);
+        symbole = sc.next().charAt(0);
 
         if (alphabet.size() != 0) {
-            i = alphabet.indexOf(s);
+            i = alphabet.indexOf(symbole);
 
             if (i != -1) { // if(alphabet.contains(s)
                 System.out.println("ERREUR . ce symbole existe !");
             }
 
             else {
-                alphabet.add(new Character(s));
-                System.out.println("votre symbole ajouté est :   " + s);
+                alphabet.add(new Character(symbole));
+                System.out.println("votre symbole ajouté est :   " + symbole);
             }
         } else {
-            alphabet.add(new Character(s));
-            System.out.println("votre symbole ajouté est :   " + s);
+            alphabet.add(new Character(symbole));
+            System.out.println("votre symbole ajouté est :   " + symbole);
         }
     }
 

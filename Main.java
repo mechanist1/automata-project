@@ -7,9 +7,9 @@ import java.util.*;
     public static void main(String[] args) {
         sc = new Scanner(System.in);
 
-        Afn a1 = new Afn();
+        Nfa a1 = new Nfa();
         determinisation a2 = new determinisation() ;
-        Afd afd = new Afd();
+        Dfa afd = new Dfa();
 
         int in;
         boolean test = true;

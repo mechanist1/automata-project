@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Afd extends Afn {
+public class Dfa extends Nfa {
 
     public ArrayList <String> etats;
     public ArrayList <Character> alphabet;
@@ -10,7 +10,7 @@ public class Afd extends Afn {
 
     Scanner sc=new Scanner(System.in);
 
-    public Afd(){
+    public Dfa(){
 
         alphabet= new ArrayList <Character> ();
         etats= new ArrayList <String> () ;

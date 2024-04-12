@@ -18,7 +18,7 @@ public class determinisation {
 
 
 
-    public void testEpsilonTransition(Afn afn){
+    public void testEpsilonTransition(Nfa afn){
         if (afn.testEpsilon()==true)
             t=0; //pas epsilon transition
 
@@ -35,7 +35,7 @@ public class determinisation {
         }
     }
 
-    public void afficherAFd(Afd afd,Afn afn){
+    public void afficherAFd(Dfa afd, Nfa afn){
         int i;
         int taille =afn.alphabet.size();
         for( i=0;i<taille;i++){
@@ -68,7 +68,7 @@ public class determinisation {
     }
 
 
-    public void toAfd(Afn afn){
+    public void toAfd(Nfa afn){
         varVide=0;
         ArrayList <String> temp; // temporary list of states
 
@@ -221,7 +221,7 @@ public class determinisation {
 
 
 
-    public void remplircolonne(ArrayList <String> tem,Afn af){
+    public void remplircolonne(ArrayList <String> tem, Nfa af){
         ArrayList <String> tp;
         col=1;
         int j,i;
@@ -291,7 +291,7 @@ public class determinisation {
         }
     }
 
-    public void remplirligne(int taille,Afn af){
+    public void remplirligne(int taille, Nfa af){
         int tailleGlobaleParcours=1;
         boolean test;
         do{
